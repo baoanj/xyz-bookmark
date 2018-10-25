@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  width: 780px;
+  height: 600px;
+}
+
+#bookmark-bar {
+  order: 1;
+  width: 100px;
+  border-left: 1px solid #cecece;
+}
+
+#bookmark-bar ul {
+  list-style: none;
+}
+
+#bookmark-bar ul li p {
+  cursor: pointer;
+  padding: 10px 0;
+  transition: all 0.3s;
+  padding-left: 5px;
+}
+
+#bookmark-bar ul li img {
+  margin-left: 5px;
+}
+
+#bookmark-bar ul li p:hover {
+  background-color: #cecece;
+}
+
+#bookmark-more {
+  order: 0;
+  width: 680px;
+  height: 600px;
+  overflow: auto;
+  padding-left: 3px;
+}
+
+#bookmark-more p {
+  width: 225px;
+  float: left;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#bookmark-more p img,
+#bookmark-bar ul li img {
+  max-width: 12px;
+  max-height: 12px;
+}

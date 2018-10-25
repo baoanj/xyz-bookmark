@@ -1,0 +1,12 @@
+{
+  "name": "XYZ-BOOKMARK",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "minimum_chrome_version": "66",
+  "browser_action": {
+    "default_icon": "48x48.png",
+    "default_title": "XYZ-BOOKMARK",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["bookmarks", "chrome://favicon/"]
+}
