@@ -8,6 +8,7 @@
   display: flex;
   width: 780px;
   height: 600px;
+  font-size: 16px;
 }
 
 #bookmark-bar {
@@ -25,6 +26,7 @@
   padding: 10px 0;
   transition: all 0.3s;
   padding-left: 5px;
+  font-weight: bold;
 }
 
 #bookmark-bar ul li img {
@@ -37,15 +39,19 @@
 
 #bookmark-more {
   order: 0;
-  width: 680px;
-  height: 600px;
+  flex: 1;
+  height: 595px;
   overflow: auto;
   padding-left: 3px;
+  display: flex;
+}
+
+#bookmark-more-left,
+#bookmark-more-right {
+  width: 50%;
 }
 
 #bookmark-more p {
-  width: 225px;
-  float: left;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -53,6 +59,6 @@
 
 #bookmark-more p img,
 #bookmark-bar ul li img {
-  max-width: 12px;
-  max-height: 12px;
+  max-width: 16px;
+  max-height: 16px;
 }
