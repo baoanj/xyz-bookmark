@@ -4,17 +4,22 @@
   box-sizing: border-box;
 }
 
+:root {
+  --font-color: #333;
+  --font-size: 12px;
+  --line-color: #eee;
+}
+
 #root {
   display: flex;
   width: 780px;
   height: 600px;
-  font-size: 16px;
 }
 
 #bookmark-bar {
   order: 1;
   width: 100px;
-  border-left: 1px solid #cecece;
+  border-left: 1px solid var(--line-color);
 }
 
 #bookmark-bar ul {
@@ -22,19 +27,29 @@
 }
 
 #bookmark-bar ul li p {
-  cursor: pointer;
+  cursor: default;
   padding: 10px 0;
   transition: all 0.3s;
   padding-left: 5px;
-  font-weight: bold;
+  font-size: 16px;
+  color: var(--font-color);
+  border-bottom: 1px dotted var(--line-color);
+}
+
+#bookmark-bar ul li:hover {
+  background-color: var(--line-color);
 }
 
 #bookmark-bar ul li img {
   margin-left: 5px;
+  margin-top: 5px;
+  vertical-align: bottom;
 }
 
-#bookmark-bar ul li p:hover {
-  background-color: #cecece;
+#bookmark-bar ul li a {
+  color: var(--font-color);
+  text-decoration: none;
+  font-size: var(--font-size);
 }
 
 #bookmark-more {
@@ -52,13 +67,25 @@
 }
 
 #bookmark-more p {
+  padding: 3px 0;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+#bookmark-more p:hover {
+  background-color: var(--line-color);
+}
+
+#bookmark-more p a {
+  color: var(--font-color);
+  text-decoration: none;
+  font-size: var(--font-size);
 }
 
 #bookmark-more p img,
 #bookmark-bar ul li img {
   max-width: 16px;
   max-height: 16px;
+  vertical-align: bottom;
 }
